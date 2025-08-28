@@ -5,8 +5,8 @@ export const addCategory=async(category)=>{
 }
 
 export const deleteCategory=async(categoryId)=>{
-    return await axios.delete(`htpp://localhost:8001/categories/${categoryId}`)
+    return await axios.delete(`http://localhost:8001/categories/${categoryId}`)
 }
-export const fetchCategory=async()=>{
-    return await axios.delete('htpp://localhost:8001/categories/listCategory')
+export const fetchCategories=async()=>{
+    return await axios.get('http://localhost:8001/categories/listCategory')
 }

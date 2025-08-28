@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-
+import { fetchCategories } from "../service/CetegoryService";
 export const AppContext=createContext(null);
 
 export const AppContextProvider=(props)=>{
@@ -7,7 +7,7 @@ export const AppContextProvider=(props)=>{
 
     useEffect(()=>{
         async function localData() {
-         const response=await  fetchCategory(); 
+         const response=await  fetchCategories(); 
          setCategories(response.data);
         }
         localData();
@@ -17,6 +17,6 @@ export const AppContextProvider=(props)=>{
            setCategories
     }
     return <AppContext.Provider value={contextValue}>
-    {props}
+     {props.children} 
     </AppContext.Provider>
 }
