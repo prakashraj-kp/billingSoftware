@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { fetchCategories } from "../service/CetegoryService";
+import { fetchCategories } from "../Service/CetegoryService";
 export const AppContext=createContext(null);
 
 export const AppContextProvider=(props)=>{

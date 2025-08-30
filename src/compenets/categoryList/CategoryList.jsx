@@ -1,7 +1,7 @@
 import './CategoryList.css'
 import { useContext, useState } from "react";
 import { AppContext } from "../../context/AppContext";
-import { deleteCategory } from '../../service/CetegoryService';
+import { deleteCategory } from '../../Service/CetegoryService';
 import toast from 'react-hot-toast';
 
 const CategoryList=()=>{
@@ -46,7 +46,7 @@ return(
     </div>
  </div>
     <div className="row g-3 pe-2">
-        {filteredCategories.map((category,index)=>(
+        {filteredCategories.map((category,categoryId)=>(
            <div key={category.categoryId} className="col-12">
             <div  className="card p-3" style={{backgroundColor:category.bgColor}}>
                 <div className="d-flex align-items-center">

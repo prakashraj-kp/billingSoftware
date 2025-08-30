@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const addCategory=async(category)=>{
-    return await axios.post('htpp://localhost:8001/categories',category);
+    return await axios.post('http://localhost:8001/categories',category);
 }
 
 export const deleteCategory=async(categoryId)=>{
